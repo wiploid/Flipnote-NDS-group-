@@ -1,0 +1,171 @@
+.quiz-section {
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  #quiz-question {
+    background-color: #973e3c;
+    color: white;
+    display: inline-block;
+    padding: 30px 200px;
+    border-radius: 12px;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .quiz-options {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .option {
+    background: #fff;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    padding: 30px;
+    width: 400px;
+    cursor: pointer;
+    transition: transform 0.3s, border-color 0.3s;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    height: 300px;
+  }
+  
+  .option:hover {
+    transform: scale(1.05);
+    border-color: #973e3c;
+  }
+  
+  .option.wrong::after {
+    content: "❌";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: red;
+    pointer-events: none;
+  }
+  .option {
+    position: relative; 
+  }
+
+
+  
+  /* Стили для текста "Правильно!" */
+  .feedback {
+    display: none;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    font-weight: bold;
+    color: green;
+    background-color: white;
+    padding: 20px 40px;
+    border-radius: 20px;
+    animation: popUp 1s ease forwards;
+    z-index: 1000;
+  }
+  
+  @keyframes popUp {
+    0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+    50% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(1); }
+  }
+  
+
+ /* Анимация дрожания для неправильного ответа */
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+/* Класс для дрожания */
+.shake {
+  animation: shake 0.5s;
+}
+
+/* Плавная анимация появления нового вопроса */
+.fade-in {
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#restart-button {
+  display: none;
+  margin-top: 10px;
+  width: 200px; /* ширина кнопки */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#restart-button:hover {
+  transform: scale(1.1); /* немного увеличиваем при наведении */
+}
+
+
+
+.site-footer {
+  background-color: #973e3c;
+  padding: 50px 800px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  margin-top: 50px;
+  border-top: 1px solid #ddd;
+}
+
+.site-footer .footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.site-footer .social-links {
+  margin: 15px 0;
+}
+
+.site-footer .social-links a {
+  margin: 0 10px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.site-footer .social-links img {
+  width: 30px;
+  height: 30px;
+}
+
+.site-footer .social-links a:hover {
+  transform: scale(1.2);
+}
+
+.site-footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}

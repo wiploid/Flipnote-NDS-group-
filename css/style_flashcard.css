@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #cfaea2;
+    min-height: 100vh;
+}
+header {
+    width: 100%;
+    background-color: #973e3c;
+    padding: 5px;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.logo {
+    height: 70px;
+    background-color: #fff;
+}
+.nameteam {
+    position: absolute;
+    left: 50%;
+    top: 15px;
+    transform: translateX(-50%);
+    font-size: 30px;
+    font-weight: bold;
+}
+.container {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.arrow {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.arrow:hover {
+    transform: scale(1.04);
+    border-color: #ffffff;
+}
+
+
+.flashcard {
+    width: 600px;
+    height: 400px;
+    perspective: 2000 px;
+    position: relative;
+}
+.flashcard .front,
+.flashcard .back {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    transition: transform 0.6s;
+    text-align: center;
+    overflow: hidden; 
+    word-wrap: break-word;
+}
+
+.flashcard .front p {
+    font-size: 32px; /* БОЛЬШЕ для передней стороны */
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.flashcard .back p {
+    font-size: 18px; /* МЕНЬШЕ для задней стороны */
+    line-height: 1.5;
+    padding: 10px;
+    font-weight: normal;
+    color: white;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.flashcard .front p,
+.flashcard .back p {
+    transition: transform 0.6s ease, font-size 0.6s ease;
+}
+
+/* Когда карточка перевернута или при наведении */
+.flashcard.flipped .front p,
+.flashcard.flipped .back p,
+.flashcard:hover .front p,
+.flashcard:hover .back p {
+    transform: scale(1.1); /* Немного увеличивается */
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+
+.flashcard .back {
+    background-color: #973e3c;
+    color: #fff;
+    transform: rotateY(180deg);
+}
+.flashcard:hover .front {
+    transform: rotateY(180deg);
+}
+.flashcard:hover .back {
+    transform: rotateY(360deg);
+}
+
+
+.audio-control {
+    margin-top: -100px;
+}
+
+.audio-button {
+    width: 250px; /* Размер картинки */
+    height: 250px;
+    cursor: pointer;
+    transition: transform 0.2s ease; /* Плавность нажатия */
+    
+}
+
+.audio-button:hover {
+    transform: scale(1.1); /* Немного увеличивается при наведении */
+    box-shadow: 0 1 1 rgba(0,0,0,0.2);
+}
+
+.audio-button:active {
+    transform: scale(0.9); /* Немного сжимается при клике */
+}
+
+.side-image {
+    max-width: 550px;
+    height: auto;
+    display: block;
+}

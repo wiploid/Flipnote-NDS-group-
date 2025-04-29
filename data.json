@@ -1,0 +1,39 @@
+{
+    "flashcards": [
+      {
+        "question": "Nevertheless",
+        "definition": "despite something that you have just mentioned",
+        "translation": "Тем не менее",
+        "audio": "data/audio/nevertheless.mp3"
+      },
+      {
+        "question": "Feasible",
+        "definition": "that is possible and likely to be achieved",
+        "translation": "Осуществимый",
+        "audio": "data/audio/feasible.mp3"
+      },
+      {
+        "question": "Sustainable",
+        "definition": "involving the use of natural products and energy in a way that does not harm the environment",
+        "translation": "Устойчивый",
+        "audio": "data/audio/sustainable.mp3"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Что означает слово 'Nevertheless'?",
+        "options": ["Тем не менее", "Осуществимый", "Устойчивый"],
+        "correct": "Тем не менее"
+      }, 
+      {
+        "question": "Что означает слово 'Feasible'?",
+        "options": ["Тем не менее", "Осуществимый", "Устойчивый"],
+        "correct": "Осуществимый"
+      },
+      {
+        "question": "Что означает слово 'Sustainable'?",
+        "options": ["Устойчивый", "Тем не менее", "Осуществимый"],
+        "correct": "Устойчивый"
+      }
+    ]
+  }

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlipNote</title>
+    <link rel="icon" href="data/images/logo.ico" sizes="32x32" type="image/png">
+    <link rel="stylesheet" href="css/style_flashcard.css" >
+    <link rel="stylesheet" href="css/style_quiz.css">
+</head>
+<body>
+    <header>
+        <img src="data/images/logo.png" alt="Neotech Logo" class="logo">
+        <div class="nameteam">FlipNote</div>
+    </header>
+
+
+    <div class="container">
+        <img src="data\images\left.jpg" alt="left" class="side-image">
+        <img src="data/images/left sign.png" class="arrow" id="prev" alt="Previous">
+        
+        <div id="flashcard" class="flashcard">
+            <div class="front">
+                <p>Нажмите на стрелочки чтобы начать, наведитесь на саму карточку чтобы посмотреть определение и перевод, а чтобы озвучить нажмите на кнопку пониже</p>
+            </div>
+            <div class="back">
+                <p>Нажмите на стрелочки чтобы начать, наведитесь на саму карточку чтобы посмотреть определение и перевод, а чтобы озвучить нажмите на кнопку пониже</p>
+            </div>
+        </div>
+
+        <img src="data/images/right sign.png" class="arrow" id="next" alt="Next">
+        <img src="data\images\right.jpg" alt="right" class="side-image">
+        
+    </div>
+
+    <div class="audio-control">
+        <img id="audioButton" src="data/images/speaker.png" alt="Play Audio" class="audio-button">
+    </div>
+
+    <div class="quiz-section">
+        <h2 id="quiz-question">Выберите правильное слово:</h2>
+        <div class="quiz-options" id="quiz-options"></div>
+      </div>
+
+      <img id="restart-button" src="data/images/restart_button.png" alt="Начать заново" />
+      
+      <div id="feedback" class="feedback"></div>
+
+
+    <script src="javascript/script_flashcard.js"></script>
+    <script src="javascript/script_quiz.js"></script>
+</body>
+
+<footer class="site-footer">
+    <div class="footer-content">
+      <p>© 2025 Школа №123 "Future School" | Все права защищены</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/school123" target="_blank">
+          <img src="data/images/Instagram.png" alt="Instagram">
+        </a>
+        <a href="https://www.facebook.com/school123" target="_blank">
+          <img src="data/images/facebook.png" alt="Facebook">
+        </a>
+        <a href="tel:+77001234567">
+          <img src="data/images/phone.png" alt="Телефон">
+        </a>
+      </div>
+      <p>Контакты: +7 (700) 123-45-67 | Email: info@school123.kz</p>
+      <p><a href="#">Политика конфиденциальности</a> | <a href="#">Условия использования</a></p>
+    </div>
+  </footer>
+
+</html>
